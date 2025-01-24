@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="flex flex-col min-h-10 overflow-hidden">
         <NavBar />
         <main>
             <Hero3D />

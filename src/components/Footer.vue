@@ -1,5 +1,5 @@
 <template>
-    <footer class="bg-red-800 text-white py-6">
+    <footer class="bg-[#9d0505] text-white py-6">
         <div class="container mx-auto px-4 text-center">
             <!-- Links -->
             <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
@@ -33,7 +33,7 @@
     </footer>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import {
     Facebook,
     Linkedin,

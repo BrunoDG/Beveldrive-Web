@@ -1,5 +1,5 @@
 <template>
-    <nav class="bg-red-800 border-b">
+    <nav class="bg-[#9d0505] border-b">
         <div class="container mx-auto px-4 py-3 flex items-center justify-between">
             <!-- Logo -->
             <a href="/" class="text-2xl font-bold text-white">Bevel Drive</a>
@@ -32,7 +32,7 @@
 
             <!-- Mobile Menu Button -->
             <button class="md:hidden text-white" @click="menuOpen = !menuOpen" aria-label="Toggle Menu">
-                <Menu class="w-6 h-6" />
+                <NavigationMenu class="w-6 h-6" />
             </button>
         </div>
 
