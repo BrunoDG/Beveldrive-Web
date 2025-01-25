@@ -1,5 +1,17 @@
-# Vue 3 + TypeScript + Vite
+# Bevel Drive Web
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+After almost 4 years, FINALLY, this website is ALIVE!
+At last, I had some time to finally create my company's website to showcase my portfolio, products and all clients that I've worked since 2023 onwards!
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+This is just the first step!
+
+## Technologies Used
+
+- Vue 3
+- Typescript
+- Vee-Validate
+- TailwindCSS
+- Three.js
+- TresJS
+- Shadcn/Vue
+- Web3Forms (Form Handler)

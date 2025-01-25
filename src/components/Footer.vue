@@ -11,16 +11,12 @@
 
             <!-- Redes Sociais -->
             <div class="mt-4 flex justify-center space-x-4">
-                <a href="https://facebook.com" target="_blank" class="text-gray-400 hover:text-white"
-                    aria-label="Facebook">
-                    <Facebook class="w-5 h-5" />
-                </a>
                 <a href="https://instagram.com/BrunoDG" target="_blank" class="text-gray-400 hover:text-white"
                     aria-label="Instagram">
                     <Instagram class="w-5 h-5" />
                 </a>
-                <a href="https://linkedin.com/in/BevelDrive" target="_blank" class="text-gray-400 hover:text-white"
-                    aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/company/bevel-drive" target="_blank"
+                    class="text-gray-400 hover:text-white" aria-label="LinkedIn">
                     <Linkedin class="w-5 h-5" />
                 </a>
             </div>
@@ -35,7 +31,6 @@
 
 <script setup lang="ts">
 import {
-    Facebook,
     Linkedin,
     Instagram
 } from 'lucide-vue-next';

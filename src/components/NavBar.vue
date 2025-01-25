@@ -1,62 +1,93 @@
 <template>
-    <nav class="bg-[#9d0505] border-b">
-        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+    <nav class="fixed w-full z-50 px-2 py-2">
+        <div class="container mx-auto flex items-center justify-between">
             <!-- Logo -->
-            <a href="/" class="text-2xl font-bold text-white">Bevel Drive</a>
+            <a href="/" class="flex items-start">
+                <img src="/logotipo.png" alt="Bevel Drive" class="h-12" />
+            </a>
 
-            <!-- Navigation Menu -->
-            <NavigationMenu>
-                <NavigationMenuList class="hidden md:flex space-x-6">
-                    <NavigationMenuItem>
-                        <NavigationMenuLink href="#sobre" class="text-white hover:text-gray-500">
-                            Sobre
-                        </NavigationMenuLink>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                        <NavigationMenuLink href="#servicos" class="text-white hover:text-gray-500">
-                            Serviços
-                        </NavigationMenuLink>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                        <NavigationMenuLink href="#portfolio" class="text-white hover:text-gray-500">
-                            Portfólio
-                        </NavigationMenuLink>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                        <NavigationMenuLink href="#contato" class="text-white hover:text-gray-500">
-                            Contato
-                        </NavigationMenuLink>
-                    </NavigationMenuItem>
-                </NavigationMenuList>
-            </NavigationMenu>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#sobre" class="text-white hover:text-red-500 transition-colors">
+                    Sobre
+                </a>
+                <a href="#servicos" class="text-white hover:text-red-500 transition-colors">
+                    Serviços
+                </a>
+                <a href="#portfolio" class="text-white hover:text-red-500 transition-colors">
+                    Portfólio
+                </a>
+                <a href="#contato" class="text-white hover:text-red-500 transition-colors">
+                    Contato
+                </a>
+            </div>
 
             <!-- Mobile Menu Button -->
-            <button class="md:hidden text-white" @click="menuOpen = !menuOpen" aria-label="Toggle Menu">
-                <NavigationMenu class="w-6 h-6" />
+            <button 
+                class="md:hidden text-white"
+                @click="menuOpen = !menuOpen"
+                aria-label="Toggle Menu"
+            >
+                <svg 
+                    class="w-6 h-6" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                >
+                    <path 
+                        v-if="!menuOpen"
+                        stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        stroke-width="2" 
+                        d="M4 6h16M4 12h16M4 18h16"
+                    />
+                    <path 
+                        v-else
+                        stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        stroke-width="2" 
+                        d="M6 18L18 6M6 6l12 12"
+                    />
+                </svg>
             </button>
         </div>
 
-        <!-- Mobile Dropdown -->
-        <div v-if="menuOpen" class="md:hidden bg-red-600 shadow-md">
-            <ul class="flex flex-col space-y-4 px-4 py-3">
-                <li><a href="#sobre" class="text-gray-600 hover:text-gray-900">Sobre</a></li>
-                <li><a href="#servicos" class="text-gray-600 hover:text-gray-900">Serviços</a></li>
-                <li><a href="#portfolio" class="text-gray-600 hover:text-gray-900">Portfólio</a></li>
-                <li><a href="#contato" class="text-gray-600 hover:text-gray-900">Contato</a></li>
-            </ul>
+        <!-- Mobile Menu -->
+        <div 
+            v-if="menuOpen" 
+            class="md:hidden absolute top-full left-0 w-full bg-black bg-opacity-80 backdrop-blur-sm"
+        >
+            <div class="container mx-auto py-4 px-4 flex flex-col space-y-4">
+                <a 
+                    v-for="item in menuItems" 
+                    :key="item.href"
+                    :href="item.href"
+                    class="text-white hover:text-red-500 transition-colors"
+                    @click="menuOpen = false"
+                >
+                    {{ item.text }}
+                </a>
+            </div>
         </div>
     </nav>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import {
-    NavigationMenu,
-    NavigationMenuItem,
-    NavigationMenuList,
-    NavigationMenuLink,
-} from '@/components/ui/navigation-menu';
+import { ref } from 'vue';
 
-// Controle do menu mobile
 const menuOpen = ref(false);
+
+const menuItems = [
+    { href: '#sobre', text: 'Sobre' },
+    { href: '#servicos', text: 'Serviços' },
+    { href: '#portfolio', text: 'Portfólio' },
+    { href: '#contato', text: 'Contato' }
+];
 </script>
+
+<style scoped>
+nav {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, transparent 100%);
+    backdrop-filter: blur(5px);
+}
+</style>
