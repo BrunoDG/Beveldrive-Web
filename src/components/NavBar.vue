@@ -3,7 +3,7 @@
         <div class="container mx-auto flex items-center justify-between">
             <!-- Logo -->
             <a href="/" class="flex items-start">
-                <img src="/logotipo.png" alt="Bevel Drive" class="h-12" />
+                <img src="@/assets/images/logotipo.png" alt="Bevel Drive" class="h-12" />
             </a>
 
             <!-- Desktop Menu -->
