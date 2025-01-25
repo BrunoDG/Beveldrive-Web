@@ -32,9 +32,14 @@ export default defineConfig({
     assetsDir: 'assets', // Coloca todos os assets em uma subpasta
     rollupOptions: {
       output: {
-        chunkFileNames: 'assets/js/[name]-[hash].js',
-        entryFileNames: 'assets/js/[name]-[hash].js',
-        assetFileNames: 'assets/[ext]/[name]-[hash].[ext]'
+        chunkFileNames: 'js/[name]-[hash].js',
+        entryFileNames: 'js/[name]-[hash].js',
+        assetFileNames: ({name}) => {
+          if (/\.(gif|jpe?g|png|svg)$/.test(name ?? '')) {
+            return 'images/[name]-[hash][extname]'
+          }
+          return 'assets/[name]-[hash][extname]'
+        },
       }
     }
   }

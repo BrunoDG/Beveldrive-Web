@@ -88,6 +88,10 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { GamepadIcon, ExternalLink, Github } from 'lucide-vue-next';
+import BubbleBobbleImage from '@/assets/images/portfolio/BubbleBobbleClone.png'
+import ShmupImage from '@/assets/images/portfolio/SampleShmupMechanics.png'
+import NiivueImage from '@/assets/images/portfolio/NiivueReader_Pic01.png'
+import RayMarchingImage from '@/assets/images/portfolio/RayMarching_sample_capture.png'
 
 const categories = ['Todos', 'Jogos', 'Web Apps']; //, 'Mobile Apps'];
 const selectedCategory = ref('Todos');
@@ -98,7 +102,7 @@ const projects = [
         title: 'Bubble Bobble Clone',
         description: 'Jogo de plataforma clássico desenvolvido com Godot',
         category: 'Jogos',
-        image: '@/assets/images/portfolio/BubbleBobbleClone.png',
+        image: BubbleBobbleImage,
         itchioLink: 'https://beveldrive.itch.io/sample-mechanics-bubble-bobble-clone',
         //githubLink: 'https://github.com/username/game1',
         releaseDate: 'Dez 2023',
@@ -109,7 +113,7 @@ const projects = [
         title: 'Shmup Mechanics',
         description: 'Jogo de naves do estilo shmup (Shoot `em up) desenvolvido com Godot',
         category: 'Jogos',
-        image: '@/assets/images/portfolio/SampleShmupMechanics.png',
+        image: ShmupImage,
         itchioLink: 'https://beveldrive.itch.io/sample-shmup-mechanics',
         //githubLink: 'https://github.com/username/game1',
         releaseDate: 'Aug 2022',
@@ -120,7 +124,7 @@ const projects = [
         title: 'NiivueReader',
         description: 'Aplicação que efetua a leitura de imagens de tomografia computadorizada e converte para formato 3D',
         category: 'Web Apps',
-        image: '@/assets/images/portfolio/NiivueReader_Pic01.png',
+        image: NiivueImage,
         demoLink: 'https://github.com/BrunoDG/NiiVueReader',
         githubLink: 'https://github.com/BrunoDG/NiiVueReader',
         releaseDate: 'Jan 2025',
@@ -131,7 +135,7 @@ const projects = [
         title: 'RayMarching Sample',
         description: 'Aplicação demonstrativa do uso de RayMarching para renderização de objetos 3D',
         category: 'Web Apps',
-        image: '@/assets/images/portfolio/RayMarching_sample_capture.png',
+        image: RayMarchingImage,
         itchioLink: 'https://beveldrive.itch.io/raymarching-sample',
         githubLink: 'https://github.com/BrunoDG/',
         releaseDate: 'Sep 2017',
