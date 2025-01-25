@@ -9,6 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bevel Drive | Desenvolvimento de Jogos e Aplicações</title>
     <meta name="description" content="Desenvolvimento de jogos e aplicações web com foco em experiências imersivas e tecnologia de ponta." />
+    <script>
+        if (!window.WebGLRenderingContext) {
+            alert('Seu navegador não suporta WebGL, necessário para a visualização 3D.');
+        }
+    </script>
   </head>
   <body>
     <div id="app"></div>

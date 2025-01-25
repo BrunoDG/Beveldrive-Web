@@ -70,6 +70,7 @@
 
 <script setup lang="ts">
 import { CheckCircle } from 'lucide-vue-next';
+import MedgrupoLogo from '@/assets/images/clients/Medgrupo_Logo.png'
 
 const clients = [
     {
@@ -78,7 +79,7 @@ const clients = [
     },
     {
         name: 'MedGrupo',
-        logo: '@/assets/images/clients/Medgrupo_Logo.png'
+        logo: MedgrupoLogo
     },
     {
         //name: '',

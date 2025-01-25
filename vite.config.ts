@@ -32,6 +32,10 @@ export default defineConfig({
     assetsDir: 'assets', // Coloca todos os assets em uma subpasta
     rollupOptions: {
       output: {
+        manualChunks: {
+          'three': ['three'],
+          'vendor': ['vue', '@tresjs/core']
+        },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
         assetFileNames: ({name}) => {
@@ -41,6 +45,11 @@ export default defineConfig({
           return 'assets/[name]-[hash][extname]'
         },
       }
-    }
+    },
+    chunkSizeWarningLimit: 1000,
+    target: 'esnext'
+  },
+  optimizeDeps: {
+    include: ['three']
   }
 });
