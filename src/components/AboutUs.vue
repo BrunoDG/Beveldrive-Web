@@ -78,7 +78,7 @@ const clients = [
     },
     {
         name: 'MedGrupo',
-        logo: '/src/assets/MedGrupo_Logo.png'
+        logo: '@/assets/images/clients/Medgrupo_Logo.png'
     },
     {
         //name: '',
