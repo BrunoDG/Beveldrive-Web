@@ -40,26 +40,30 @@
                 <h3 class="text-2xl font-bold text-white mb-10 text-center">Clientes que confiaram em nosso trabalho</h3>
                 
                 <div class="relative overflow-hidden">
-                    <!-- Gradiente de fade nas bordas -->
-                    <div class="absolute left-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-r from-black to-transparent"></div>
-                    <div class="absolute right-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-l from-black to-transparent"></div>
+                    <!-- Gradientes -->
+                    <div class="absolute left-0 top-0 bottom-0 w-16 md:w-32 z-10 bg-gradient-to-r from-black to-transparent"></div>
+                    <div class="absolute right-0 top-0 bottom-0 w-16 md:w-32 z-10 bg-gradient-to-l from-black to-transparent"></div>
                     
-                    <!-- Primeira fileira de logos -->
+                    <!-- Logos -->
                     <div class="flex animate-scroll">
-                        <div class="flex items-center gap-16 px-8">
-                            <img v-for="(client, index) in clients" 
+                        <div class="flex items-center min-w-max px-4 md:px-8">
+                            <div v-for="(client, index) in clients" 
                                  :key="`client-1-${index}`"
-                                 :src="client.logo" 
-                                 :alt="client.name"
-                                 class="h-16 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
+                                 class="mx-8 md:mx-16 flex-shrink-0">
+                                <img :src="client.logo" 
+                                     :alt="client.name"
+                                     class="h-8 md:h-16 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
+                            </div>
                         </div>
-                        <!-- Duplicata para scroll infinito -->
-                        <div class="flex items-center gap-16 px-8">
-                            <img v-for="(client, index) in clients" 
+                        <!-- Duplicata -->
+                        <div class="flex items-center min-w-max px-4 md:px-8">
+                            <div v-for="(client, index) in clients" 
                                  :key="`client-2-${index}`"
-                                 :src="client.logo" 
-                                 :alt="client.name"
-                                 class="h-16 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
+                                 class="mx-8 md:mx-16 flex-shrink-0">
+                                <img :src="client.logo" 
+                                     :alt="client.name"
+                                     class="h-8 md:h-16 w-auto grayscale hover:grayscale-0 transition-all duration-300" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -81,10 +85,6 @@ const clients = [
         name: 'MedGrupo',
         logo: MedgrupoLogo
     },
-    {
-        //name: '',
-        //logo: 'https://'
-    },
     // Adicione mais clientes aqui
 ];
 </script>
@@ -100,7 +100,13 @@ const clients = [
 }
 
 .animate-scroll {
-    animation: scroll 30s linear infinite;
+    animation: scroll 15s linear infinite;
+}
+
+@media (max-width: 768px) {
+    .animate-scroll {
+        animation: scroll 10s linear infinite;
+    }
 }
 
 .animate-scroll:hover {

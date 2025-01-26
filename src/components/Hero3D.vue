@@ -1,20 +1,7 @@
 <template>
     <section class="relative flex min-h-screen bg-black bg-opacity-30">
-        <!-- Texto da Hero -->
-        <div class="relative z-10 text-white w-1/2 flex flex-col justify-center p-8">
-            <h1 class="text-5xl font-bold text-start">Bem-vindo ao futuro</h1>
-            <p class="mt-4 text-xl text-gray-300 text-start">
-                Experimente uma nova dimensão, com experiências imersivas e tecnologia de ponta. <br />
-                Descubra mais sobre nosso trabalho e conecte-se.
-            </p>
-            <div class="mt-6 flex justify-start">
-                <Button class="bg-[#9d0505] hover:bg-red-600 w-60 h-10 text-white p-6 rounded-md">
-                    Saiba Mais
-                </Button>
-            </div>
-        </div>
         <!-- Canvas do TresJS -->
-        <div class="absolute inset-0" v-if="isClient">
+        <div class="absolute inset-0" style="z-index: 0;" v-if="isClient">
             <TresCanvas shadows alpha>
                 <template #default>
                     <TresPerspectiveCamera :position="[0, 10, 0]" :look-at="[-10, -10, -10]" />
@@ -31,6 +18,20 @@
                     </Suspense>
                 </template>
             </TresCanvas>
+        </div>
+
+        <!-- Texto da Hero -->
+        <div class="relative z-20 text-white w-full md:w-1/2 flex flex-col justify-center p-8 text-center md:text-start">
+            <h1 class="text-4xl md:text-5xl font-bold">Bem-vindo ao futuro</h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-300">
+                Experimente uma nova dimensão, com experiências imersivas e tecnologia de ponta. <br class="hidden md:block" />
+                Descubra mais sobre nosso trabalho e conecte-se.
+            </p>
+            <div class="mt-6 flex justify-center md:justify-start">
+                <Button class="bg-[#9d0505] hover:bg-red-600 w-60 h-10 text-white p-6 rounded-md">
+                    Saiba Mais
+                </Button>
+            </div>
         </div>
     </section>
 </template>
