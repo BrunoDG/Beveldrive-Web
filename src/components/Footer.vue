@@ -1,29 +1,40 @@
 <template>
-    <footer class="bg-[#9d0505] text-white py-6">
-        <div class="container mx-auto px-4 text-center">
-            <!-- Links -->
-            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
-                <a href="#sobre" class="hover:text-blue-400">Sobre</a>
-                <a href="#servicos" class="hover:text-blue-400">Serviços</a>
-                <a href="#portfolio" class="hover:text-blue-400">Portfólio</a>
-                <a href="#contato" class="hover:text-blue-400">Contato</a>
-            </div>
+    <footer class="bg-[#9d0505] text-white py-4">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Links de Navegação -->
+                <div class="space-y-2">
+                    <h2 class="text-xl font-bold">Links</h2>
+                    <div class="flex flex-col space-y-1">
+                        <a href="#sobre" class="hover:text-gray-300 transition-colors">Sobre</a>
+                        <a href="#servicos" class="hover:text-gray-300 transition-colors">Serviços</a>
+                        <a href="#portfolio" class="hover:text-gray-300 transition-colors">Portfólio</a>
+                        <a href="#contato" class="hover:text-gray-300 transition-colors">Contato</a>
+                    </div>
+                </div>
 
-            <!-- Redes Sociais -->
-            <div class="mt-4 flex justify-center space-x-4">
-                <a href="https://instagram.com/BrunoDG" target="_blank" class="text-gray-400 hover:text-white"
-                    aria-label="Instagram">
-                    <Instagram class="w-5 h-5" />
-                </a>
-                <a href="https://www.linkedin.com/company/bevel-drive" target="_blank"
-                    class="text-gray-400 hover:text-white" aria-label="LinkedIn">
-                    <Linkedin class="w-5 h-5" />
-                </a>
-            </div>
+                <!-- Redes Sociais -->
+                <div class="space-y-2">
+                    <h2 class="text-xl font-bold">Redes Sociais</h2>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com/BrunoDG" target="_blank" 
+                            class="text-white hover:text-gray-300 transition-colors"
+                            aria-label="Instagram">
+                            <Instagram class="w-5 h-5" />
+                        </a>
+                        <a href="https://www.linkedin.com/company/bevel-drive" target="_blank"
+                            class="text-white hover:text-gray-300 transition-colors"
+                            aria-label="LinkedIn">
+                            <Linkedin class="w-5 h-5" />
+                        </a>
+                    </div>
+                </div>
 
-            <!-- Copyright -->
-            <div class="mt-4 text-sm text-gray-400">
-                &copy; 2025 Bevel Drive. Todos os direitos reservados.
+                <!-- Copyright -->
+                <div class="text-sm md:text-right flex items-center justify-end">
+                    &copy; 2025 Bevel Drive.<br class="hidden md:block" />
+                    Todos os direitos reservados.
+                </div>
             </div>
         </div>
     </footer>

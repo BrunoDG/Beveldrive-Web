@@ -1,5 +1,5 @@
 <template>
-    <section class="min-h-screen bg-black py-20 px-4" id="sobre">
+    <section class="min-h-screen py-20 px-4" id="sobre">
         <div class="container mx-auto">
             <h2 class="text-4xl font-bold text-white mb-10">Sobre Nós</h2>
 
@@ -74,19 +74,7 @@
 
 <script setup lang="ts">
 import { CheckCircle } from 'lucide-vue-next';
-import MedgrupoLogo from '@/assets/images/clients/Medgrupo_Logo.png'
-
-const clients = [
-    {
-        name: 'FS Studio',
-        logo: 'https://fsstudio.com/wp-content/themes/fs-studio/assets/img/svg/logo.svg'
-    },
-    {
-        name: 'MedGrupo',
-        logo: MedgrupoLogo
-    },
-    // Adicione mais clientes aqui
-];
+import { clients } from '@/data/clients';
 </script>
 
 <style scoped>

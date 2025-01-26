@@ -12,11 +12,8 @@
   "dependencies": {
     "@tresjs/core": "^4.3.2",
     "autoprefixer": "^10.4.20",
-    "class-variance-authority": "^0.7.1",
     "lucide-vue-next": "^0.473.0",
     "postcss": "^8.5.1",
-    "radix-vue": "^1.9.12",
-    "shadcn-vue": "^0.11.3",
     "tailwindcss": "^3.4.17",
     "tailwindcss-animate": "^1.0.7",
     "tailwindcss-animated": "^1.1.2",

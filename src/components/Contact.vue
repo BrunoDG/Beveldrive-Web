@@ -1,11 +1,12 @@
 <template>
-    <section class="min-h-screen bg-black py-20 px-4" id="contato">
+    <section class="min-h-screen py-20 px-4" id="contato">
         <div class="container mx-auto">
             <h2 class="text-4xl font-bold text-white mb-10">Contato</h2>
 
             <div class="grid md:grid-cols-2 gap-10">
-                <div class="space-y-6">
-                    <h3 class="text-2xl font-bold text-white">Fale Conosco</h3>
+                <!-- Card do Formulário -->
+                <div class="backdrop-blur-sm bg-zinc-900/30 rounded-lg p-8">
+                    <h3 class="text-2xl font-bold text-white mb-6">Fale Conosco</h3>
 
                     <Form @submit="onSubmit" class="space-y-4">
                         <!-- Web3Forms Access Key -->
@@ -37,12 +38,33 @@
 
                         <div>
                             <label class="text-white block mb-2">Mensagem</label>
-                            <Field name="message" v-slot="{ field, errors }">
-                                <textarea v-bind="field" rows="4"
-                                    class="w-full p-2 rounded bg-zinc-900 text-white border transition-colors outline-none resize-none"
-                                    :class="[
-                                        errors.length ? 'border-red-500' : 'border-zinc-700 focus:border-[#9d0505]'
-                                    ]" placeholder="Sua mensagem..."></textarea>
+                            <Field name="message" :rules="validateMessage" v-slot="{ field, errors }">
+                                <div class="relative">
+                                    <textarea 
+                                        v-bind="field" 
+                                        rows="4"
+                                        class="w-full p-2 rounded bg-zinc-900 text-white border transition-colors outline-none resize-none"
+                                        :class="[
+                                            errors.length ? 'border-red-500' : 'border-zinc-700 focus:border-[#9d0505]'
+                                        ]" 
+                                        placeholder="Sua mensagem..."
+                                        @input="updateCharCount"
+                                    ></textarea>
+                                    <div class="absolute right-2 bottom-2 flex items-center gap-2">
+                                        <span :class="[
+                                            'text-sm transition-colors',
+                                            charCount >= 280 ? 'text-green-500' : 'text-gray-400'
+                                        ]">
+                                            {{ charCount }}/280
+                                        </span>
+                                        <div class="w-4 h-4 rounded-full border-2 transition-colors" :class="[
+                                            charCount >= 280 ? 'border-green-500' : 'border-gray-400',
+                                            'flex items-center justify-center'
+                                        ]">
+                                            <div v-if="charCount >= 280" class="w-2 h-2 bg-green-500 rounded-full"></div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <span class="text-red-500 text-sm" v-if="errors.length">{{ errors[0] }}</span>
                             </Field>
                         </div>
@@ -50,41 +72,43 @@
                         <!-- Captcha -->
                         <div class="h-captcha" data-captcha="true"></div>
 
-                        <Button type="submit" :disabled="isSubmitting" :class="[
-                                'bg-[#9d0505] hover:bg-red-700 text-white px-6 py-2 rounded w-full',
-                                isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
-                            ]">
+                        <button 
+                            type="submit" 
+                            :disabled="isSubmitting"
+                            class="w-full bg-[#9d0505] hover:bg-red-700 text-white px-6 py-2 rounded transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
                             <span v-if="isSubmitting" class="flex items-center justify-center gap-2">
                                 <Loader2Icon class="w-4 h-4 animate-spin" />
                                 Enviando...
                             </span>
                             <span v-else>Enviar Mensagem</span>
-                        </Button>
+                        </button>
 
                         <!-- Mensagem de sucesso/erro -->
                         <div v-if="submitStatus" :class="[
-                                 'p-4 rounded text-center',
-                                 submitStatus.type === 'success' ? 'bg-green-600' : 'bg-red-600'
-                             ]">
+                            'p-4 rounded text-center',
+                            submitStatus.type === 'success' ? 'bg-green-600/80' : 'bg-red-600/80'
+                        ]">
                             {{ submitStatus.message }}
                         </div>
                     </Form>
                 </div>
 
-                <div class="space-y-6 text-right">
-                    <h3 class="text-2xl font-bold text-white">Informações de Contato</h3>
-                    <div class="space-y-4 text-gray-300">
-                        <div class="flex items-center gap-2 justify-end">
+                <!-- Informações de Contato -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-white mb-6 text-right">Informações de Contato</h3>
+                    <div class="space-y-6 text-gray-300">
+                        <div class="flex items-center gap-4 justify-end">
                             <span>Rio de Janeiro, RJ</span>
-                            <MapPin class="text-[#9d0505]" />
+                            <MapPin class="text-[#9d0505] w-6 h-6" />
                         </div>
-                        <div class="flex items-center gap-2 justify-end">
+                        <div class="flex items-center gap-4 justify-end">
                             <span>contato@beveldrive.com.br</span>
-                            <Mail class="text-[#9d0505]" />
+                            <Mail class="text-[#9d0505] w-6 h-6" />
                         </div>
-                        <div class="flex items-center gap-2 justify-end">
+                        <div class="flex items-center gap-4 justify-end">
                             <span>(48) 98813-0991</span>
-                            <Phone class="text-[#9d0505]" />
+                            <Phone class="text-[#9d0505] w-6 h-6" />
                         </div>
                     </div>
                 </div>
@@ -97,15 +121,21 @@
 import { ref, onMounted } from 'vue';
 import { Form, Field } from 'vee-validate';
 import { MapPin, Mail, Phone, Loader2Icon } from 'lucide-vue-next';
-import { Button } from '@/components/ui/button';
 import * as yup from 'yup';
 
 const isSubmitting = ref(false);
 const submitStatus = ref<{ type: 'success' | 'error'; message: string } | null>(null);
+const charCount = ref(0);
 
 // Validações
 const validateName = yup.string().required('Nome é obrigatório').min(3, 'Nome muito curto');
 const validateEmail = yup.string().required('Email é obrigatório').email('Email inválido');
+const validateMessage = yup
+    .string()
+    .required('Mensagem é obrigatória')
+    .min(280, 'A mensagem deve ter pelo menos 280 caracteres')
+    .test('maxLength', 'A mensagem não pode exceder 3000 caracteres', 
+        value => value?.length <= 3000);
 
 const onSubmit = async (values: any) => {
     isSubmitting.value = true;
@@ -142,6 +172,11 @@ const onSubmit = async (values: any) => {
     } finally {
         isSubmitting.value = false;
     }
+};
+
+const updateCharCount = (e: Event) => {
+    const target = e.target as HTMLTextAreaElement;
+    charCount.value = target.value.length;
 };
 
 // Adicione no head da página
