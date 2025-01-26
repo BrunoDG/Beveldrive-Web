@@ -1,12 +1,12 @@
 <template>
-    <section class="min-h-screen py-20 px-4" id="contato">
+    <section class="min-h-screen py-10 md:py-20 px-2 md:px-4" id="contato">
         <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-white mb-10">Contato</h2>
+            <h2 class="text-4xl font-bold text-white mb-10 text-center md:text-left">Contato</h2>
 
-            <div class="grid md:grid-cols-2 gap-10">
+            <div class="grid md:grid-cols-2 gap-6 md:gap-10">
                 <!-- Card do Formulário -->
-                <div class="backdrop-blur-sm bg-zinc-900/30 rounded-lg p-8">
-                    <h3 class="text-2xl font-bold text-white mb-6">Fale Conosco</h3>
+                <div class="backdrop-blur-sm bg-zinc-900/30 rounded-lg p-4 md:p-8 w-full mx-auto max-w-lg md:max-w-none">
+                    <h3 class="text-2xl font-bold text-white mb-6 text-center md:text-left">Fale Conosco</h3>
 
                     <Form @submit="onSubmit" class="space-y-4">
                         <!-- Web3Forms Access Key -->
@@ -94,8 +94,8 @@
                     </Form>
                 </div>
 
-                <!-- Informações de Contato -->
-                <div class="space-y-6">
+                <!-- Informações de Contato - Visível apenas em desktop -->
+                <div class="hidden md:block space-y-6">
                     <h3 class="text-2xl font-bold text-white mb-6 text-right">Informações de Contato</h3>
                     <div class="space-y-6 text-gray-300">
                         <div class="flex items-center gap-4 justify-end">
@@ -111,6 +111,18 @@
                             <Phone class="text-[#9d0505] w-6 h-6" />
                         </div>
                     </div>
+                </div>
+
+                <!-- Informações de Contato Compactas - Visível apenas em mobile -->
+                <div class="md:hidden flex flex-col gap-3 items-center">
+                    <a href="mailto:contato@beveldrive.com.br" class="flex items-center gap-2 text-gray-300">
+                        <Mail class="text-[#9d0505] w-5 h-5" />
+                        <span class="text-sm">contato@beveldrive.com.br</span>
+                    </a>
+                    <a href="tel:+5548988130991" class="flex items-center gap-2 text-gray-300">
+                        <Phone class="text-[#9d0505] w-5 h-5" />
+                        <span class="text-sm">(48) 98813-0991</span>
+                    </a>
                 </div>
             </div>
         </div>
