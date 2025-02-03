@@ -2,6 +2,7 @@ import BubbleBobbleImage from "@/assets/images/portfolio/BubbleBobbleClone.png";
 import ShmupImage from "@/assets/images/portfolio/SampleShmupMechanics.png";
 import NiivueImage from "@/assets/images/portfolio/NiivueReader_Pic01.png";
 import RayMarchingImage from "@/assets/images/portfolio/Raymarching_sample_capture.png";
+import AdminMedJogosImage from "@/assets/images/portfolio/AdminMedJogos.png";
 
 export interface Project {
     id: number;
@@ -70,5 +71,23 @@ export const projects: Project[] = [
         releaseDate: "Sep 2017",
         technologies: ["JavaScript", "Three.js"],
     },
+    {
+        id: 5,
+        title: "Admin MedJogos",
+        description:
+            "Painel de administração para o serviço MedJogos",
+        category: "Web Apps",
+        image: AdminMedJogosImage,
+        demoLink: "https://admin.medjogos.com",
+        releaseDate: "Jan 2025",
+        technologies: [
+            "Vue.js",
+            "TypeScript",
+            "Tailwind",
+            "Express.js",
+            "MongoDB",
+        ],
+    },
     // ... outros projetos
+
 ];
