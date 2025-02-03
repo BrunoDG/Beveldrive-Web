@@ -71,7 +71,7 @@ export const projects: Project[] = [
         releaseDate: "Sep 2017",
         technologies: ["JavaScript", "Three.js"],
     },
-    {
+/*    {
         id: 5,
         title: "Admin MedJogos",
         description:
@@ -87,7 +87,7 @@ export const projects: Project[] = [
             "Express.js",
             "MongoDB",
         ],
-    },
+    },*/
     // ... outros projetos
 
 ];
