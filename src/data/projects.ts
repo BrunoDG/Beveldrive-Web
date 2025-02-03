@@ -2,7 +2,7 @@ import BubbleBobbleImage from "@/assets/images/portfolio/BubbleBobbleClone.png";
 import ShmupImage from "@/assets/images/portfolio/SampleShmupMechanics.png";
 import NiivueImage from "@/assets/images/portfolio/NiivueReader_Pic01.png";
 import RayMarchingImage from "@/assets/images/portfolio/Raymarching_sample_capture.png";
-import AdminMedJogosImage from "@/assets/images/portfolio/Admin_MedJogos.png";
+import AdminMedJogosImage from "@/assets/images/portfolio/Admin_Medjogos.png";
 
 export interface Project {
     id: number;
