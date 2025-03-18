@@ -1,0 +1,71 @@
+{
+    "nav": {
+        "about": "Sobre",
+        "services": "Servicios",
+        "portfolio": "Portafolio",
+        "contact": "Contacto",
+        "cv": "Currículum"
+    },
+    "hero": {
+        "title": "Bienvenido al futuro",
+        "subtitle": "Experimenta una nueva dimensión, con experiencias inmersivas y tecnología de vanguardia. Conoce más sobre nuestro trabajo y conéctate.",
+        "cta": "Conoce Más"
+    },
+    "about": {
+        "title": "Sobre Nosotros",
+        "description1": "Bevel Drive nació de la pasión por la tecnología y la innovación. Nuestra misión es transformar ideas en experiencias digitales únicas.",
+        "description2": "Con un equipo especializado en desarrollo y diseño, creamos soluciones que combinan tecnología de vanguardia con creatividad.",
+        "values": {
+            "title": "Nuestros Valores",
+            "innovation": "Innovación Constante",
+            "excellence": "Excelencia Técnica",
+            "commitment": "Compromiso con Resultados"
+        },
+        "clients": {
+            "title": "Clientes que confiaron en nuestro trabajo"
+        }
+    },
+    "products": {
+        "title": "Nuestros Productos",
+        "web": {
+            "title": "Desarrollo Web",
+            "description": "Creación de sitios web y aplicaciones web modernas y responsivas, utilizando tecnologías como Vue.js, Three.js, TailwindCSS, Python, FastAPI, PostgreSQL, entre otros."
+        },
+        "games": {
+            "title": "Desarrollo de Juegos",
+            "description": "Desarrollo de juegos para escritorio y móvil, utilizando Godot, Unity, C#, GDScript, WebGL, WebGPU y Typescript."
+        }
+    },
+    "contact": {
+        "title": "Contacto",
+        "form": {
+            "title": "Contáctanos",
+            "name": "Nombre",
+            "email": "Correo",
+            "message": "Mensaje",
+            "submit": "Enviar Mensaje",
+            "sending": "Enviando...",
+            "success": "¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.",
+            "error": "Error al enviar el mensaje. Por favor, inténtalo de nuevo."
+        },
+        "info": {
+            "title": "Información de Contacto",
+            "location": "Río de Janeiro, RJ",
+            "email": "contato@beveldrive.com.br",
+            "phone": "(48) 98813-0991"
+        }
+    },
+    "team": {
+        "description": "Nuestro equipo está compuesto por profesionales apasionados por la tecnología y la innovación, dedicados a crear experiencias digitales excepcionales.",
+        "roles": {
+            "founder": "Fundador & Desarrollador Full Stack"
+        },
+        "members": {
+            "bruno": "Desarrollador apasionado por crear experiencias digitales únicas y memorables. Especializado en desarrollo web y juegos."
+        },
+        "viewCV": "Ver Currículum",
+        "openPositions": "Posiciones Abiertas",
+        "positionsDescription": "Siempre estamos buscando talentos para expandir nuestro equipo. Si te apasiona la tecnología y quieres ser parte de proyectos innovadores, ¡contáctanos!",
+        "contactUs": "Contáctanos"
+    }
+} 

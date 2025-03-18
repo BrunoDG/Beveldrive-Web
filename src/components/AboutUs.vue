@@ -1,35 +1,32 @@
 <template>
     <section class="min-h-screen py-20 px-4" id="sobre">
         <div class="container mx-auto">
-            <h2 class="text-4xl font-bold text-white mb-10">Sobre Nós</h2>
+            <h2 class="text-4xl font-bold text-white mb-10">{{ $t('about.title') }}</h2>
 
             <div class="grid md:grid-cols-2 gap-10">
                 <div class="text-gray-300 space-y-6">
                     <p class="text-lg">
-                        A Bevel Drive nasceu da paixão por tecnologia e inovação. Nossa missão é transformar ideias em
-                        experiências digitais únicas.
+                        {{ $t('about.description1') }}
                     </p>
                     <p class="text-lg">
-                        Com uma equipe especializada em desenvolvimento e design, criamos soluções que combinam
-                        tecnologia de ponta com criatividade.
+                        {{ $t('about.description2') }}
                     </p>
-                    
                 </div>
 
                 <div class="bg-[#9d0505] p-8 rounded-lg">
-                    <h3 class="text-2xl font-bold text-white mb-4">Nossos Valores</h3>
+                    <h3 class="text-2xl font-bold text-white mb-4">{{ $t('about.values.title') }}</h3>
                     <ul class="text-white space-y-4">
                         <li class="flex items-center gap-2">
                             <CheckCircle class="w-5 h-5" />
-                            Inovação Constante
+                            {{ $t('about.values.innovation') }}
                         </li>
                         <li class="flex items-center gap-2">
                             <CheckCircle class="w-5 h-5" />
-                            Excelência Técnica
+                            {{ $t('about.values.excellence') }}
                         </li>
                         <li class="flex items-center gap-2">
                             <CheckCircle class="w-5 h-5" />
-                            Compromisso com Resultados
+                            {{ $t('about.values.commitment') }}
                         </li>
                     </ul>
                 </div>
@@ -37,7 +34,7 @@
 
             <!-- Slider de Clientes -->
             <div class="mt-20">
-                <h3 class="text-2xl font-bold text-white mb-10 text-center">Clientes que confiaram em nosso trabalho</h3>
+                <h3 class="text-2xl font-bold text-white mb-10 text-center">{{ $t('about.clients.title') }}</h3>
                 
                 <div class="relative overflow-hidden">
                     <!-- Gradientes -->

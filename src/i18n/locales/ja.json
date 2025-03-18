@@ -1,0 +1,71 @@
+{
+    "nav": {
+        "about": "概要",
+        "services": "サービス",
+        "portfolio": "ポートフォリオ",
+        "contact": "お問い合わせ",
+        "cv": "履歴書"
+    },
+    "hero": {
+        "title": "未来へようこそ",
+        "subtitle": "没入感のある体験と最先端のテクノロジーで、新しい次元を体験してください。私たちの仕事についてもっと知り、つながりましょう。",
+        "cta": "詳しく見る"
+    },
+    "about": {
+        "title": "会社概要",
+        "description1": "Bevel Driveは、テクノロジーとイノベーションへの情熱から生まれました。私たちの使命は、アイデアをユニークなデジタル体験に変えることです。",
+        "description2": "開発とデザインに特化したチームで、最先端のテクノロジーと創造性を組み合わせたソリューションを作成しています。",
+        "values": {
+            "title": "私たちの価値観",
+            "innovation": "継続的なイノベーション",
+            "excellence": "技術的卓越性",
+            "commitment": "結果へのコミットメント"
+        },
+        "clients": {
+            "title": "お客様の声"
+        }
+    },
+    "products": {
+        "title": "製品・サービス",
+        "web": {
+            "title": "Web開発",
+            "description": "Vue.js、Three.js、TailwindCSS、Python、FastAPI、PostgreSQLなどの技術を使用した、モダンでレスポンシブなウェブサイトとウェブアプリケーションの作成。"
+        },
+        "games": {
+            "title": "ゲーム開発",
+            "description": "Godot、Unity、C#、GDScript、WebGL、WebGPU、Typescriptを使用したデスクトップとモバイル向けゲームの開発。"
+        }
+    },
+    "contact": {
+        "title": "お問い合わせ",
+        "form": {
+            "title": "お問い合わせフォーム",
+            "name": "お名前",
+            "email": "メールアドレス",
+            "message": "メッセージ",
+            "submit": "送信",
+            "sending": "送信中...",
+            "success": "メッセージが正常に送信されました！近日中にご連絡いたします。",
+            "error": "メッセージの送信に失敗しました。もう一度お試しください。"
+        },
+        "info": {
+            "title": "連絡先情報",
+            "location": "リオデジャネイロ、RJ",
+            "email": "contato@beveldrive.com.br",
+            "phone": "(48) 98813-0991"
+        }
+    },
+    "team": {
+        "description": "私たちのチームは、テクノロジーとイノベーションに情熱を持つプロフェッショナルで構成され、卓越したデジタル体験の創造に専念しています。",
+        "roles": {
+            "founder": "創業者 & フルスタック開発者"
+        },
+        "members": {
+            "bruno": "ユニークで記憶に残るデジタル体験の創造に情熱を持つ開発者。Web開発とゲーム開発を専門としています。"
+        },
+        "viewCV": "履歴書を見る",
+        "openPositions": "採用情報",
+        "positionsDescription": "私たちは常にチームを拡大するための人材を探しています。テクノロジーに情熱があり、革新的なプロジェクトに参加したい方は、お気軽にお問い合わせください！",
+        "contactUs": "お問い合わせ"
+    }
+} 

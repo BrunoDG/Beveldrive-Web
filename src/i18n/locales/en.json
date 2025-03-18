@@ -1,0 +1,80 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact",
+        "cv": "Resume",
+        "team": "Team"
+    },
+    "hero": {
+        "title": "Welcome to the future",
+        "subtitle": "We create innovative digital experiences that inspire and transform",
+        "cta": "Learn More"
+    },
+    "about": {
+        "title": "About Us",
+        "description1": "Bevel Drive is a technology company focused on creating innovative digital experiences. We combine creativity and technical expertise to deliver exceptional solutions.",
+        "description2": "Our mission is to push the boundaries of what's possible in digital technology, creating experiences that inspire and transform.",
+        "values": {
+            "title": "Our Values",
+            "innovation": "Innovation",
+            "excellence": "Excellence",
+            "commitment": "Commitment"
+        },
+        "clients": {
+            "title": "Clients who trusted our work"
+        }
+    },
+    "products": {
+        "title": "Our Products",
+        "items": {
+            "games": {
+                "title": "Games",
+                "description": "Interactive and engaging games that captivate players"
+            },
+            "webapps": {
+                "title": "Web Applications",
+                "description": "Modern and responsive web applications"
+            },
+            "3d": {
+                "title": "3D Experiences",
+                "description": "Immersive 3D experiences that bring ideas to life"
+            }
+        }
+    },
+    "contact": {
+        "title": "Contact",
+        "form": {
+            "title": "Get in Touch",
+            "name": "Name",
+            "email": "Email",
+            "message": "Message",
+            "submit": "Send Message",
+            "sending": "Sending...",
+            "success": "Message sent successfully!",
+            "error": "Error sending message. Please try again."
+        },
+        "info": {
+            "title": "Contact Information",
+            "location": "Location",
+            "email": "Email",
+            "phone": "Phone"
+        }
+    },
+    "team": {
+        "description": "Our team consists of professionals passionate about technology and innovation, dedicated to creating exceptional digital experiences.",
+        "joinUs": "We are always looking for talented individuals to expand our team and continue growing.",
+        "openPositions": "Open Positions",
+        "positionsDescription": "Interested in joining our team? Contact us to learn more about available opportunities.",
+        "contactUs": "Contact Us",
+        "roles": {
+            "founder": "Founder & Full Stack Developer"
+        },
+        "members": {
+            "bruno": "Developer passionate about creating unique and memorable digital experiences. Specialized in web and game development."
+        },
+        "viewCV": "View CV"
+    }
+} 
