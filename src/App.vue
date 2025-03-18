@@ -1,9 +1,9 @@
 <template>
-    <router-view></router-view>
+    <HomeView />
 </template>
 
 <script setup lang="ts">
-// O router-view irá renderizar as páginas dinamicamente
+import HomeView from './views/HomeView.vue';
 </script>
 
 <style>

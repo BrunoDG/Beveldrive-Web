@@ -58,7 +58,16 @@
             "submit": "Send Message",
             "sending": "Sending...",
             "success": "Message sent successfully! We'll get back to you soon.",
-            "error": "Error sending message. Please try again."
+            "error": "Error sending message. Please try again.",
+            "validation": {
+                "nameRequired": "Name is required",
+                "nameTooShort": "Name is too short",
+                "emailRequired": "Email is required",
+                "emailInvalid": "Invalid email",
+                "messageRequired": "Message is required",
+                "messageTooShort": "Message must be at least 280 characters",
+                "messageTooLong": "Message cannot exceed 3000 characters"
+            }
         },
         "info": {
             "title": "Contact Information",

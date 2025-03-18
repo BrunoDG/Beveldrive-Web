@@ -3,20 +3,20 @@
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo -->
-                <router-link to="/" class="flex items-start">
+                <a href="/" class="flex items-start">
                     <img src="@/assets/images/Logotipo.png" alt="Bevel Drive" class="h-12" />
-                </router-link>
+                </a>
 
                 <!-- Menu Desktop -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <router-link 
+                    <a 
                         v-for="item in menuItems" 
                         :key="item.id"
-                        :to="item.path"
+                        :href="item.path"
                         class="text-gray-300 hover:text-white transition-colors"
                     >
                         {{ $t(item.titleKey) }}
-                    </router-link>
+                    </a>
                     <LanguageSelector />
                 </div>
 
@@ -35,15 +35,15 @@
                 class="md:hidden fixed top-16 left-0 right-0 bg-black/90 backdrop-blur-md border-b border-white/10"
             >
                 <div class="container mx-auto px-4 py-4 space-y-4">
-                    <router-link 
+                    <a 
                         v-for="item in menuItems" 
                         :key="item.id"
-                        :to="item.path"
+                        :href="item.path"
                         class="block text-gray-300 hover:text-white transition-colors"
                         @click="menuOpen = false"
                     >
                         {{ $t(item.titleKey) }}
-                    </router-link>
+                    </a>
                     <LanguageSelector />
                 </div>
             </div>
@@ -75,7 +75,5 @@ const menuItems = computed<MenuItem[]>(() => [
 </script>
 
 <style scoped>
-.router-link-active {
-    @apply text-white;
-}
+/* Removendo o estilo específico do router-link */
 </style>

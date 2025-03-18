@@ -47,7 +47,16 @@
             "submit": "Wyślij Wiadomość",
             "sending": "Wysyłanie...",
             "success": "Wiadomość została wysłana pomyślnie! Skontaktujemy się wkrótce.",
-            "error": "Błąd podczas wysyłania wiadomości. Spróbuj ponownie."
+            "error": "Błąd podczas wysyłania wiadomości. Spróbuj ponownie.",
+            "validation": {
+                "nameRequired": "Imię jest wymagane",
+                "nameTooShort": "Imię jest za krótkie",
+                "emailRequired": "Email jest wymagany",
+                "emailInvalid": "Nieprawidłowy email",
+                "messageRequired": "Wiadomość jest wymagana",
+                "messageTooShort": "Wiadomość musi mieć co najmniej 280 znaków",
+                "messageTooLong": "Wiadomość nie może przekraczać 3000 znaków"
+            }
         },
         "info": {
             "title": "Informacje Kontaktowe",

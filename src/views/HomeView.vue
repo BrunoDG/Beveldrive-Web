@@ -36,6 +36,6 @@ import AboutUs from '@/components/AboutUs.vue';
 import Products from '@/components/Products.vue';
 import Portfolio from '@/components/Portfolio.vue';
 import TeamSection from '@/components/TeamSection.vue';
-import Contact from '@/components/Contact.vue';
+import Contact from '../components/Contact.vue';
 import Footer from '@/components/Footer.vue';
 </script>

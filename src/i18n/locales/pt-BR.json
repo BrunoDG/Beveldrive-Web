@@ -47,7 +47,16 @@
             "submit": "Enviar Mensagem",
             "sending": "Enviando...",
             "success": "Mensagem enviada com sucesso! Entraremos em contato em breve.",
-            "error": "Erro ao enviar mensagem. Por favor, tente novamente."
+            "error": "Erro ao enviar mensagem. Por favor, tente novamente.",
+            "validation": {
+                "nameRequired": "Nome é obrigatório",
+                "nameTooShort": "Nome muito curto",
+                "emailRequired": "Email é obrigatório",
+                "emailInvalid": "Email inválido",
+                "messageRequired": "Mensagem é obrigatória",
+                "messageTooShort": "Mensagem deve ter pelo menos 280 caracteres",
+                "messageTooLong": "Mensagem não pode exceder 3000 caracteres"
+            }
         },
         "info": {
             "title": "Informações de Contato",

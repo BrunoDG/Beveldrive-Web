@@ -10,6 +10,10 @@ export default defineConfig({
   plugins: [
     vue({
       ...templateCompilerOptions,
+      script: {
+        defineModel: true,
+        propsDestructure: true
+      }
     }),
   ],
   css: {
@@ -33,7 +37,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           'three': ['three'],
-          'vendor': ['vue', '@tresjs/core']
+          'vendor': ['vue', '@tresjs/core', 'vee-validate', 'yup']
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
@@ -46,9 +50,10 @@ export default defineConfig({
       }
     },
     chunkSizeWarningLimit: 1000,
-    target: 'esnext'
+    target: 'esnext',
+    sourcemap: true
   },
   optimizeDeps: {
-    include: ['three']
+    include: ['three', 'vee-validate', 'yup']
   }
 });
