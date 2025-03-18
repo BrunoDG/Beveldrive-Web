@@ -69,5 +69,31 @@
             "bruno": "Desenvolvedor apaixonado por criar experiências digitais únicas e memoráveis. Especializado em desenvolvimento web e jogos."
         },
         "viewCV": "Ver Currículo"
+    },
+    "portfolio": {
+        "title": "Portfólio",
+        "categories": {
+            "all": "Todos",
+            "games": "Jogos",
+            "webapps": "Web Apps"
+        },
+        "projects": {
+            "game1": {
+                "title": "Bubble Bobble Clone",
+                "description": "Jogo de plataforma clássico desenvolvido com Godot"
+            },
+            "game2": {
+                "title": "Shmup Mechanics",
+                "description": "Jogo de naves do estilo shmup (Shoot `em up) desenvolvido com Godot"
+            },
+            "web1": {
+                "title": "NiivueReader",
+                "description": "Aplicação que efetua a leitura de imagens de tomografia computadorizada e converte para formato 3D"
+            },
+            "web2": {
+                "title": "RayMarching Sample",
+                "description": "Aplicação demonstrativa do uso de RayMarching para renderização de objetos 3D"
+            }
+        }
     }
 } 

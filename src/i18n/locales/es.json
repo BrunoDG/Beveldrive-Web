@@ -4,7 +4,8 @@
         "services": "Servicios",
         "portfolio": "Portafolio",
         "contact": "Contacto",
-        "cv": "Currículum"
+        "cv": "Currículum",
+        "team": "Equipo"
     },
     "hero": {
         "title": "Bienvenido al futuro",
@@ -67,5 +68,31 @@
         "openPositions": "Posiciones Abiertas",
         "positionsDescription": "Siempre estamos buscando talentos para expandir nuestro equipo. Si te apasiona la tecnología y quieres ser parte de proyectos innovadores, ¡contáctanos!",
         "contactUs": "Contáctanos"
+    },
+    "portfolio": {
+        "title": "Portafolio",
+        "categories": {
+            "all": "Todos",
+            "games": "Juegos",
+            "webapps": "Aplicaciones Web"
+        },
+        "projects": {
+            "game1": {
+                "title": "Clon de Bubble Bobble",
+                "description": "Juego de plataformas clásico desarrollado con Godot"
+            },
+            "game2": {
+                "title": "Mecánicas Shmup",
+                "description": "Juego de naves estilo shoot 'em up desarrollado con Godot"
+            },
+            "web1": {
+                "title": "NiivueReader",
+                "description": "Aplicación que lee imágenes de tomografía computarizada y las convierte a formato 3D"
+            },
+            "web2": {
+                "title": "Muestra de RayMarching",
+                "description": "Aplicación demostrativa del uso de RayMarching para renderizado de objetos 3D"
+            }
+        }
     }
 } 

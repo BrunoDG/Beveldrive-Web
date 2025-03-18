@@ -4,7 +4,8 @@
         "services": "サービス",
         "portfolio": "ポートフォリオ",
         "contact": "お問い合わせ",
-        "cv": "履歴書"
+        "cv": "履歴書",
+        "team": "チーム"
     },
     "hero": {
         "title": "未来へようこそ",
@@ -67,5 +68,31 @@
         "openPositions": "採用情報",
         "positionsDescription": "私たちは常にチームを拡大するための人材を探しています。テクノロジーに情熱があり、革新的なプロジェクトに参加したい方は、お気軽にお問い合わせください！",
         "contactUs": "お問い合わせ"
+    },
+    "portfolio": {
+        "title": "ポートフォリオ",
+        "categories": {
+            "all": "すべて",
+            "games": "ゲーム",
+            "webapps": "Webアプリ"
+        },
+        "projects": {
+            "game1": {
+                "title": "バブルボブル クローン",
+                "description": "Godotで開発されたクラシックなプラットフォームゲーム"
+            },
+            "game2": {
+                "title": "シューティングゲーム メカニクス",
+                "description": "Godotで開発されたシューティングゲーム"
+            },
+            "web1": {
+                "title": "NiivueReader",
+                "description": "CT画像を読み取り3D形式に変換するアプリケーション"
+            },
+            "web2": {
+                "title": "レイマーチング サンプル",
+                "description": "3Dオブジェクトのレンダリングにレイマーチングを使用したデモアプリケーション"
+            }
+        }
     }
 } 

@@ -15,7 +15,7 @@
             <main class="relative">
                 <Hero3D />
 
-                <div class="backdrop-blur-sm">
+                <div class="relative">
                     <AboutUs id="sobre" />
                     <Products id="servicos" />
                     <Portfolio id="portfolio" />

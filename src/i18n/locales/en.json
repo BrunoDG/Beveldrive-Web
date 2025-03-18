@@ -10,18 +10,18 @@
     },
     "hero": {
         "title": "Welcome to the future",
-        "subtitle": "We create innovative digital experiences that inspire and transform",
+        "subtitle": "Experience a new dimension, with immersive experiences and cutting-edge technology. Learn more about our work and connect.",
         "cta": "Learn More"
     },
     "about": {
         "title": "About Us",
-        "description1": "Bevel Drive is a technology company focused on creating innovative digital experiences. We combine creativity and technical expertise to deliver exceptional solutions.",
-        "description2": "Our mission is to push the boundaries of what's possible in digital technology, creating experiences that inspire and transform.",
+        "description1": "Bevel Drive was born from a passion for technology and innovation. Our mission is to transform ideas into unique digital experiences.",
+        "description2": "With a team specialized in development and design, we create solutions that combine cutting-edge technology with creativity.",
         "values": {
             "title": "Our Values",
-            "innovation": "Innovation",
-            "excellence": "Excellence",
-            "commitment": "Commitment"
+            "innovation": "Constant Innovation",
+            "excellence": "Technical Excellence",
+            "commitment": "Commitment to Results"
         },
         "clients": {
             "title": "Clients who trusted our work"
@@ -29,11 +29,15 @@
     },
     "products": {
         "title": "Our Products",
+        "web": {
+            "title": "Web Development",
+            "description": "Creation of modern and responsive websites and web applications, using technologies such as Vue.js, Three.js, TailwindCSS, Python, FastAPI, PostgreSQL, and others."
+        },
+        "games": {
+            "title": "Game Development",
+            "description": "Development of desktop and mobile games, using Godot, Unity, C#, GDScript, WebGL, WebGPU, and Typescript."
+        },
         "items": {
-            "games": {
-                "title": "Games",
-                "description": "Interactive and engaging games that captivate players"
-            },
             "webapps": {
                 "title": "Web Applications",
                 "description": "Modern and responsive web applications"
@@ -47,27 +51,27 @@
     "contact": {
         "title": "Contact",
         "form": {
-            "title": "Get in Touch",
+            "title": "Contact Us",
             "name": "Name",
             "email": "Email",
             "message": "Message",
             "submit": "Send Message",
             "sending": "Sending...",
-            "success": "Message sent successfully!",
+            "success": "Message sent successfully! We'll get back to you soon.",
             "error": "Error sending message. Please try again."
         },
         "info": {
             "title": "Contact Information",
-            "location": "Location",
-            "email": "Email",
-            "phone": "Phone"
+            "location": "Rio de Janeiro, RJ",
+            "email": "contato@beveldrive.com.br",
+            "phone": "(48) 98813-0991"
         }
     },
     "team": {
-        "description": "Our team consists of professionals passionate about technology and innovation, dedicated to creating exceptional digital experiences.",
+        "description": "Our team is composed of professionals passionate about technology and innovation, dedicated to creating exceptional digital experiences.",
         "joinUs": "We are always looking for talented individuals to expand our team and continue growing.",
         "openPositions": "Open Positions",
-        "positionsDescription": "Interested in joining our team? Contact us to learn more about available opportunities.",
+        "positionsDescription": "We're always looking for talents to expand our team. If you're passionate about technology and want to be part of innovative projects, contact us!",
         "contactUs": "Contact Us",
         "roles": {
             "founder": "Founder & Full Stack Developer"
@@ -75,6 +79,32 @@
         "members": {
             "bruno": "Developer passionate about creating unique and memorable digital experiences. Specialized in web and game development."
         },
-        "viewCV": "View CV"
+        "viewCV": "View Resume"
+    },
+    "portfolio": {
+        "title": "Portfolio",
+        "categories": {
+            "all": "All",
+            "games": "Games",
+            "webapps": "Web Apps"
+        },
+        "projects": {
+            "game1": {
+                "title": "Bubble Bobble Clone",
+                "description": "Classic platform game developed with Godot"
+            },
+            "game2": {
+                "title": "Shmup Mechanics",
+                "description": "Shoot 'em up style game developed with Godot"
+            },
+            "web1": {
+                "title": "NiivueReader",
+                "description": "Application that reads computed tomography images and converts them to 3D format"
+            },
+            "web2": {
+                "title": "RayMarching Sample",
+                "description": "Demo application showcasing the use of RayMarching for 3D object rendering"
+            }
+        }
     }
 } 

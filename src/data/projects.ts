@@ -6,8 +6,8 @@ import AdminMedJogosImage from "@/assets/images/portfolio/Admin_Medjogos.png";
 
 export interface Project {
     id: number;
-    title: string;
-    description: string;
+    titleKey: string;
+    descriptionKey: string;
     category: string;
     image: string;
     itchioLink?: string;
@@ -15,37 +15,41 @@ export interface Project {
     githubLink?: string;
     releaseDate: string;
     technologies: string[];
+    demo?: string;
+    github?: string;
 }
 
 export const projects: Project[] = [
     {
         id: 1,
-        title: "Bubble Bobble Clone",
-        description: "Jogo de plataforma clássico desenvolvido com Godot",
-        category: "Jogos",
+        titleKey: 'portfolio.projects.game1.title',
+        descriptionKey: 'portfolio.projects.game1.description',
+        category: 'games',
         image: BubbleBobbleImage,
         itchioLink:
             "https://beveldrive.itch.io/sample-mechanics-bubble-bobble-clone",
         releaseDate: "Dez 2023",
-        technologies: ["Godot", "GDScript"],
+        technologies: ["Godot", "GDScript", "Pixel Art"],
+        demo: 'https://game1.com',
+        github: 'https://github.com/brunodias/game1'
     },
     {
         id: 2,
-        title: "Shmup Mechanics",
-        description:
-            "Jogo de naves do estilo shmup (Shoot `em up) desenvolvido com Godot",
-        category: "Jogos",
+        titleKey: 'portfolio.projects.game2.title',
+        descriptionKey: 'portfolio.projects.game2.description',
+        category: 'games',
         image: ShmupImage,
         itchioLink: "https://beveldrive.itch.io/sample-shmup-mechanics",
         releaseDate: "Aug 2022",
         technologies: ["Godot", "GDScript"],
+        demo: 'https://game2.com',
+        github: 'https://github.com/brunodias/game2'
     },
     {
         id: 3,
-        title: "NiivueReader",
-        description:
-            "Aplicação que efetua a leitura de imagens de tomografia computadorizada e converte para formato 3D",
-        category: "Web Apps",
+        titleKey: 'portfolio.projects.web1.title',
+        descriptionKey: 'portfolio.projects.web1.description',
+        category: "webapps",
         image: NiivueImage,
         demoLink: "https://github.com/BrunoDG/NiiVueReader",
         githubLink: "https://github.com/BrunoDG/NiiVueReader",
@@ -61,33 +65,15 @@ export const projects: Project[] = [
     },
     {
         id: 4,
-        title: "RayMarching Sample",
-        description:
-            "Aplicação demonstrativa do uso de RayMarching para renderização de objetos 3D",
-        category: "Web Apps",
+        titleKey: 'portfolio.projects.web2.title',
+        descriptionKey: 'portfolio.projects.web2.description',
+        category: "webapps",
         image: RayMarchingImage,
         itchioLink: "https://beveldrive.itch.io/raymarching-sample",
         githubLink: "https://github.com/BrunoDG/",
         releaseDate: "Sep 2017",
         technologies: ["JavaScript", "Three.js"],
     },
-/*    {
-        id: 5,
-        title: "Admin MedJogos",
-        description:
-            "Painel de administração para o serviço MedJogos",
-        category: "Web Apps",
-        image: AdminMedJogosImage,
-        demoLink: "https://admin.medjogos.com",
-        releaseDate: "Jan 2025",
-        technologies: [
-            "Vue.js",
-            "TypeScript",
-            "Tailwind",
-            "Express.js",
-            "MongoDB",
-        ],
-    },*/
     // ... outros projetos
 
 ];
