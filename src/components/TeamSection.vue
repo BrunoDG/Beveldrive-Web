@@ -5,9 +5,14 @@
             <p class="text-gray-300 text-lg mb-12">{{ $t('team.description') }}</p>
 
             <!-- Grid de Membros -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div :class="[
+                'gap-6',
+                teamMembers.length === 1 
+                    ? 'flex justify-center' 
+                    : 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4'
+            ]">
                 <div v-for="member in teamMembers" :key="member.name"
-                    class="group backdrop-blur-sm bg-zinc-900/50 rounded-lg overflow-hidden hover:bg-zinc-900 transition-all duration-300 relative">
+                    class="group backdrop-blur-sm bg-zinc-900/50 rounded-lg overflow-hidden hover:bg-zinc-900 transition-all duration-300 relative w-full max-w-xs">
                     <!-- Imagem -->
                     <div class="aspect-square w-full">
                         <img :src="member.photo" :alt="member.name" class="w-full h-full object-cover" />

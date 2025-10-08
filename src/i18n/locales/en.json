@@ -113,6 +113,10 @@
             "web2": {
                 "title": "RayMarching Sample",
                 "description": "Demo application showcasing the use of RayMarching for 3D object rendering"
+            },
+            "web3": {
+                "title": "Demoscene Brasil",
+                "description": "Website dedicated to preserving and promoting demoscene culture in Brazil"
             }
         }
     }
